@@ -15,6 +15,8 @@ import com.cart.controller.Joinbtn;
 import com.cart.controller.Login;
 import com.cart.controller.Loginbtn;
 import com.cart.controller.Main;
+import com.cart.controller.Sortvideo;
+import com.cart.controller.Video;
 
 
 
@@ -38,6 +40,8 @@ public class FrontController extends HttpServlet {
 		map.put("Joinbtn.do", new Joinbtn());
 		map.put("Login.do", new Login());
 		map.put("Loginbtn.do", new Loginbtn());
+		map.put("Video.do", new Video());
+		map.put("Sortvideo.do", new Sortvideo());
 		
 		
 	}
