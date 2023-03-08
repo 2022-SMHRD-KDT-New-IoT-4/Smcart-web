@@ -9,10 +9,6 @@
   		select * from tb_video order by video_exp desc
   </select>
   
-  <select id="selectVideo" parameterType="VideoDTO" resultType="VideoDTO">
-  		SELECT * FROM tb_video
-  		WHERE ${sort} LIKE CONCAT('%', #{search}, '%')
-  </select>
   
 </mapper>
 

@@ -12,6 +12,7 @@
 	<!-- MessageMapper파일에서 사용할 type들의 별명을 지정해주는 공간 -->
 		<typeAlias type="com.cart.model.UserDTO" alias="UserDTO"/>
 		<typeAlias type="com.cart.model.VideoDTO" alias="VideoDTO"/>
+		<typeAlias type="com.cart.model.BoardDTO" alias="BoardDTO"/>
 	</typeAliases>
 
 
@@ -52,6 +53,7 @@
   <mappers>
     <mapper resource="com/cart/db/UserMapper.xml"/>
     <mapper resource="com/cart/db/VideoMapper.xml"/>
+    <mapper resource="com/cart/db/BoardMapper.xml"/>
   </mappers>
   
   

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.cart.model.BoardDAO" > 
+  
+  <select id="boardselectall" parameterType="BoardDTO" resultType="BoardDTO">
+  		select * from tb_board
+  </select>
+  
+  <select id="boardselect" parameterType="BoardDTO" resultType="BoardDTO">
+  		select * from tb_board where board_seq = #{board_seq}
+  </select>
+ 
+  
+</mapper>
+

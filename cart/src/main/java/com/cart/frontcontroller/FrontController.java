@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cart.controller.Board;
+import com.cart.controller.Boardone;
 import com.cart.controller.Command;
 import com.cart.controller.Join;
 import com.cart.controller.Joinbtn;
@@ -41,6 +43,9 @@ public class FrontController extends HttpServlet {
 		map.put("Login.do", new Login());
 		map.put("Loginbtn.do", new Loginbtn());
 		map.put("Video.do", new Video());
+		map.put("Board.do", new Board());
+		map.put("Boardone.do", new Boardone());
+		
 		map.put("Sortvideo.do", new Sortvideo());
 		
 		
