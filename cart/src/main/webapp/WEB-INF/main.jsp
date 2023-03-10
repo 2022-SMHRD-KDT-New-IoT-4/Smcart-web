@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.cart.model.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -26,7 +27,12 @@
 </head>
 
 <body>
-<% UserDTO user = (UserDTO)session.getAttribute("user"); %>
+<% 
+	UserDTO user = (UserDTO)session.getAttribute("user");
+	//String qr_code = request.getParameter("qr_code");
+	//System.out.println(qr_code);
+	//System.out.println("왜안돼");
+%>
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
