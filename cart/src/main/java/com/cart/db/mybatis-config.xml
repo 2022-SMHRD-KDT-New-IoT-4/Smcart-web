@@ -54,6 +54,7 @@
     <mapper resource="com/cart/db/UserMapper.xml"/>
     <mapper resource="com/cart/db/VideoMapper.xml"/>
     <mapper resource="com/cart/db/BoardMapper.xml"/>
+    <mapper resource="com/cart/db/QrMapper.xml"/>
   </mappers>
   
   
