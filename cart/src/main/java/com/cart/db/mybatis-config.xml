@@ -13,6 +13,7 @@
 		<typeAlias type="com.cart.model.UserDTO" alias="UserDTO"/>
 		<typeAlias type="com.cart.model.VideoDTO" alias="VideoDTO"/>
 		<typeAlias type="com.cart.model.BoardDTO" alias="BoardDTO"/>
+		<typeAlias type="com.cart.model.ProdDTO" alias="ProdDTO"/>
 	</typeAliases>
 
 
@@ -55,6 +56,7 @@
     <mapper resource="com/cart/db/VideoMapper.xml"/>
     <mapper resource="com/cart/db/BoardMapper.xml"/>
     <mapper resource="com/cart/db/QrMapper.xml"/>
+    <mapper resource="com/cart/db/BascketMapper.xml"/>
   </mappers>
   
   
