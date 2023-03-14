@@ -19,7 +19,6 @@ public class Main implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-
 		return "main.jsp"; 
 	}
 

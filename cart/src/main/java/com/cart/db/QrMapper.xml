@@ -10,4 +10,7 @@
   		where module_qr = #{module_qr}
   </select>
   
+  <update id="UpdateRun" >
+  		UPDATE tb_video_run SET run = 1
+  </update>
 </mapper>

@@ -25,6 +25,8 @@ public class Qr implements Command {
 		String qr_code = request.getParameter("qr_code");
 		QrDAO dao = new QrDAO();
 		row = dao.SelectQr(qr_code);
+		System.out.println(row);
+		
 		
 		//session
 		HttpSession session = request.getSession();
