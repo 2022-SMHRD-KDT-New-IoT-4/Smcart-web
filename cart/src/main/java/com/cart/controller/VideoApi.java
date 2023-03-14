@@ -21,8 +21,9 @@ public class VideoApi implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		// 라파에서 
-		// http://211.223.106.67:8081/cart/Video.do url로 접근했을 때
+		// http://211.223.106.67:8081/cart/VideoApi.do url로 접근했을 때
 		// 실행되는 로직입니다 예호~~~~~
+		// 여기서 실행하고 위 url로 수정후 확인하세요
 		
 		
 		
