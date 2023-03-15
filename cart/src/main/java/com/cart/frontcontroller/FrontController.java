@@ -19,6 +19,9 @@ import com.cart.controller.Loginbtn;
 import com.cart.controller.Main;
 import com.cart.controller.Sortvideo;
 import com.cart.controller.Video;
+import com.cart.controller.VideoApi;
+import com.cart.model.Barcode;
+import com.cart.model.Qr;
 
 
 
@@ -46,9 +49,13 @@ public class FrontController extends HttpServlet {
 		map.put("Board.do", new Board());
 		map.put("Boardone.do", new Boardone());
 		
+		//////////////////////////////////////////
+		map.put("Qr.do", new Qr());
+		map.put("Video.do", new Video());
 		map.put("Sortvideo.do", new Sortvideo());
-		
-		
+		map.put("Barcode.do", new Barcode());
+		map.put("VideoApi.do", new VideoApi());
+
 	}
 	
 	
