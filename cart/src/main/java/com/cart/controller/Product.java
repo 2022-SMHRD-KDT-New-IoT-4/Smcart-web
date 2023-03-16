@@ -21,7 +21,7 @@ public class Product implements Command {
 	private static final long serialVersionUID = 1L;
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// ㄱㅏ니?
 		ProductDTO dto = new ProductDTO();
 		dto.setprod_seq(null); // 상품 아이디
 		
