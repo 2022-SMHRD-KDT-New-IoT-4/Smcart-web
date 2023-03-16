@@ -1,6 +1,7 @@
 package com.cart.model;
 
 public class ProductDTO {
+	// 푸쉬
 	 
     private String prod_seq; // 상품 아이디 
     private String prod_name; // 상품 명 
