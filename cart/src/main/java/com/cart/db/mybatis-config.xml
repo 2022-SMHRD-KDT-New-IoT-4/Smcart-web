@@ -15,6 +15,8 @@
 		<typeAlias type="com.cart.model.BoardDTO" alias="BoardDTO"/>
 		<typeAlias type="com.cart.model.ProdDTO" alias="ProdDTO"/>
 		<typeAlias type="com.cart.model.VideoRunDTO" alias="VideoRunDTO"/>
+		<typeAlias type="com.cart.model.BasketDTO" alias="BasketDTO"/>
+		<typeAlias type="com.cart.model.ProductDTO" alias="ProductDTO"/>
 		
 	</typeAliases>
 
@@ -58,8 +60,9 @@
     <mapper resource="com/cart/db/VideoMapper.xml"/>
     <mapper resource="com/cart/db/BoardMapper.xml"/>
     <mapper resource="com/cart/db/QrMapper.xml"/>
-    <mapper resource="com/cart/db/BascketMapper.xml"/>
+    <mapper resource="com/cart/db/BasketMapper.xml"/>
     <mapper resource="com/cart/db/VideoRunMapper.xml"/>
+    <mapper resource="com/cart/db/ProductMapper.xml"/>
   </mappers>
   
   

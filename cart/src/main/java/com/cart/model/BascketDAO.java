@@ -18,10 +18,6 @@ public class BascketDAO {
 			data = session.selectOne("com.cart.model.BasketDAO.SelectProd", bc_input);
 			
 			// data를 android로 보낼 때 형식?
-			
-			
-			
-			
 			if (data != null) {
 				row = 1;
 			}

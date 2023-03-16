@@ -5,7 +5,7 @@
   
 <mapper namespace="com.cart.model.BasketDAO" > 
   
-  <select id="selectbasket" parameterType="BasketDTO" resultType="BasketDTO">
+  <select id="selectProd" parameterType="BasketDTO" resultType="BasketDTO">
   		select * from tb_basket 
   </select>
   
