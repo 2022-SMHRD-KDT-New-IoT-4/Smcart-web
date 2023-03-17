@@ -44,6 +44,7 @@ public class Barcode implements Command {
 		HttpSession session = request.getSession();
 		String row = (String) session.getAttribute("row");
 		
+		
 		PrintWriter out = response.getWriter();
 	    out.print(row);
 	    System.out.println("들어가니? : "+row);

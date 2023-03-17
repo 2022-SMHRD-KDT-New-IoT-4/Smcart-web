@@ -13,7 +13,7 @@ public class ProductDAO {
 		List<ProductDTO> list = null;
 		SqlSession session = sqlSessionFactory.openSession(true);
 		try {
-			list = session.selectList("com.cart.model.Product.selectProd", dto);
+			list = session.selectList("com.cart.model.ProductDAO.selectProd", dto);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

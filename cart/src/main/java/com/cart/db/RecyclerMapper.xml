@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.cart.model.RecyclerDAO" > 
+  
+  <select id="SelectRec" parameterType="RecyclerDTO" resultType="RecyclerDTO">
+  		SELECT B.prod_img, B.prod_name, A.prod_cnt, B.prod_price
+		FROM tb_basket AS A INNER JOIN tb_product AS B
+		ON (A.prod_seq = B.prod_seq);
+  </select>
+</mapper>
+
+
+
+
+	

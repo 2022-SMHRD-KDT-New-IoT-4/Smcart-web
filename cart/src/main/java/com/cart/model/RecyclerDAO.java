@@ -7,13 +7,21 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.cart.db.SqlSessionManager;
 
-public class BasketDAO {
+public class RecyclerDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-	public List<BasketDTO> select() {
-		List<BasketDTO> list = null;
+	
+	public List<RecyclerDTO> select() {
+		List<RecyclerDTO> list = null;
 		SqlSession session = sqlSessionFactory.openSession(true);
 		try {
-			list = session.selectList("com.cart.model.BasketDAO.selectProd");
+			list = session.selectList("com.cart.model.RecyclerDAO.SelectRec");
+			if(list != null) {
+				for (RecyclerDTO i : list) {
+					System.out.println(i.getProd_cnt());
+					System.out.println(i.getProd_name());
+				}
+			}
+			System.out.println("들어오니???"+list);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -21,4 +29,12 @@ public class BasketDAO {
 		}
 		return list;
 	}
+	
+	
+	
+	
+	
+	
+
+
 }

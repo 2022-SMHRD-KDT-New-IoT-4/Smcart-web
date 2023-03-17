@@ -9,13 +9,20 @@ public class BascketDAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 
 	public int InsertBasket(String bc_input) {
+		
 		System.out.println(bc_input);
 		ProdDTO data = null;
+		int basketdto = 0;
 
 		int row = 0;
 		SqlSession session = sqlSessionFactory.openSession(true);
 		try {
-			data = session.selectOne("com.cart.model.BasketDAO.SelectProd", bc_input);
+			ProdDTO temp = new ProdDTO();
+			temp.setProd_seq(bc_input);
+			data = session.selectOne("com.cart.model.BasketDAO.SelectProd", temp);
+			System.out.println("들어오니1???"+data);
+			basketdto = session.insert("com.cart.model.BasketDAO.InsertBasket", data);
+			System.out.println("들어오니2???"+basketdto);
 			
 			// data를 android로 보낼 때 형식?
 			if (data != null) {

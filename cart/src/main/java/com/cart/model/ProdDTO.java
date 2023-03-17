@@ -2,13 +2,13 @@ package com.cart.model;
 
 public class ProdDTO {
 
-	private String prod_id;
+	private String prod_seq;
 	private String prod_name;
 	private String prod_bardcode;
 	private String prod_price;
 	private String prod_loc;
 	private String prod_img;
-	private String prod_stock_yn;
+	private char prod_stock_yn;
 	
 	
 	
@@ -16,9 +16,9 @@ public class ProdDTO {
 	
 	
 	public ProdDTO(String prod_id, String prod_name, String prod_bardcode, String prod_price, String prod_loc,
-			String prod_img, String prod_stock_yn) {
+			String prod_img, char prod_stock_yn) {
 		super();
-		this.prod_id = prod_id;
+		this.prod_seq = prod_seq;
 		this.prod_name = prod_name;
 		this.prod_bardcode = prod_bardcode;
 		this.prod_price = prod_price;
@@ -38,11 +38,11 @@ public class ProdDTO {
 	
 	
 	
-	public String getProd_id() {
-		return prod_id;
+	public String getProd_seq() {
+		return prod_seq;
 	}
-	public void setProd_id(String prod_id) {
-		this.prod_id = prod_id;
+	public void setProd_seq(String prod_seq) {
+		this.prod_seq = prod_seq;
 	}
 	public String getProd_name() {
 		return prod_name;
@@ -74,10 +74,10 @@ public class ProdDTO {
 	public void setProd_img(String prod_img) {
 		this.prod_img = prod_img;
 	}
-	public String getProd_stock_yn() {
+	public char getProd_stock_yn() {
 		return prod_stock_yn;
 	}
-	public void setProd_stock_yn(String prod_stock_yn) {
+	public void setProd_stock_yn(char prod_stock_yn) {
 		this.prod_stock_yn = prod_stock_yn;
 	}
 	

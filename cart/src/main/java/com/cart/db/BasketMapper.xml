@@ -5,9 +5,17 @@
   
 <mapper namespace="com.cart.model.BasketDAO" > 
   
-  <select id="selectProd" parameterType="BasketDTO" resultType="BasketDTO">
-  		select * from tb_basket 
+  <select id="SelectProd" parameterType="BasketDTO" resultType="ProdDTO">
+  		select * from tb_product where prod_seq = #{prod_seq}
   </select>
+  
+  <insert id="InsertBasket" parameterType="ProdDTO">
+  		insert into tb_basket values(nextval(sq_basket), #{prod_seq}, 1, 1, now())
+  </insert>
+  
+  <delete id="DeleteBasket" parameterType="BasketDTO">
+  		delete from tb_bakset where prod_seq = #{prod_seq}
+  </delete>
   
   
 </mapper>

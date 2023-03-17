@@ -1,16 +1,16 @@
-/*	
-*	############################################################################################
-*	
-*	KLOROFIL - Free Bootstrap Dashboard Template
-*	---------------------------------------------------------------------
+/*   
+*   ############################################################################################
+*   
+*   KLOROFIL - Free Bootstrap Dashboard Template
+*   ---------------------------------------------------------------------
 *
-*	Version: 	2.0
-*	Author: 	The Develovers
-*	Website: 	https://www.themeineed.com/
-*	Copyright: 	Copyright 2016 The Develovers
-*	License: 	Creative Common Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
-*	
-*	############################################################################################
+*   Version:    2.0
+*   Author:    The Develovers
+*   Website:    https://www.themeineed.com/
+*   Copyright:    Copyright 2016 The Develovers
+*   License:    Creative Common Attribution 4.0 https://creativecommons.org/licenses/by/4.0/
+*   
+*   ############################################################################################
 */
 /********************
  * GENERAL STYLES
@@ -20,7 +20,7 @@ html {
   min-height: 100%; }
 
 body {
-  background-color: #F3F5F8;
+  background-color: #f5f5fa;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   color: #676a6d; }
@@ -30,6 +30,8 @@ a {
   a:hover, a:focus {
     color: #3b98c8;
     text-decoration: none; }
+
+    
 
 th {
   font-weight: 600; }
@@ -361,16 +363,17 @@ ul.notifications > li {
   z-index: 9; }
   .sidebar .nav > li > a {
     padding: 18px 30px;
-    color: #AEB7C2;
+    color: rgb(158, 166, 177);
+    
     border-left: 5px solid transparent; }
     .sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
-      color: #fff;
+      color: #fed300;
       background-color: transparent; }
       .sidebar .nav > li > a:hover i, .sidebar .nav > li > a:focus i, .sidebar .nav > li > a.active i {
-        color: #00AAFF; }
+        color: #fed300; }
     .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
       background-color: #252c35;
-      border-left-color: #00AAFF; }
+      border-left-color: #fed300; }
     .sidebar .nav > li > a[data-toggle="collapse"] .icon-submenu {
       display: inline-block;
       vertical-align: middle;

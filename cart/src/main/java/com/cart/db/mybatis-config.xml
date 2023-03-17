@@ -17,6 +17,7 @@
 		<typeAlias type="com.cart.model.VideoRunDTO" alias="VideoRunDTO"/>
 		<typeAlias type="com.cart.model.BasketDTO" alias="BasketDTO"/>
 		<typeAlias type="com.cart.model.ProductDTO" alias="ProductDTO"/>
+		<typeAlias type="com.cart.model.RecyclerDTO" alias="RecyclerDTO"/>
 		
 	</typeAliases>
 
@@ -63,6 +64,7 @@
     <mapper resource="com/cart/db/BasketMapper.xml"/>
     <mapper resource="com/cart/db/VideoRunMapper.xml"/>
     <mapper resource="com/cart/db/ProductMapper.xml"/>
+    <mapper resource="com/cart/db/RecyclerMapper.xml"/>
   </mappers>
   
   

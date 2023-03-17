@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import com.cart.model.BasketDAO;
 import com.cart.model.BasketDTO;
 import com.cart.model.ProductDAO;
 import com.cart.model.ProductDTO;
@@ -21,9 +20,12 @@ public class Product implements Command {
 	private static final long serialVersionUID = 1L;
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// ㄱㅏ니?
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		
 		ProductDTO dto = new ProductDTO();
-		dto.setprod_seq(null); // 상품 아이디
+		dto.setprod_seq("8809358103140"); // 상품 아이디(바코드 번호)
 		
 		ProductDAO dao = new ProductDAO();
 		List<ProductDTO> list = dao.select(dto);
@@ -39,6 +41,7 @@ public class Product implements Command {
 				data.put("prod_stock_yn", list.get(i).getprod_stockyn());
 				array.add(data);
 			}
+			
 			response.getWriter().print(array);
 			System.out.println(array);
 		}
