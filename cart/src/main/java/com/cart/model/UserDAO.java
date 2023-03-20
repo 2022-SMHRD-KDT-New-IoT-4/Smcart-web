@@ -20,6 +20,20 @@ public class UserDAO {
 		} 
 		return row;
 	}
+	
+	// 안드로이드 조인
+	public int AndJoin(UserDTO dto) {
+		int row = 0;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		try {
+			row = session.insert("com.cart.model.UserDAO.AndJoin", dto);
+		} catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			session.close();
+		} 
+		return row;
+	}
 
 	public UserDTO login(UserDTO dto) {
 		UserDTO user = null;

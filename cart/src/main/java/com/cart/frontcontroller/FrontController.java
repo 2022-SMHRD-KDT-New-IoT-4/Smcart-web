@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cart.controller.Product;
+import com.cart.controller.AndJoin;
+import com.cart.controller.AndLogin;
 import com.cart.controller.Bakset;
 import com.cart.controller.Board;
 import com.cart.controller.Boardone;
@@ -61,7 +63,11 @@ public class FrontController extends HttpServlet {
 		map.put("Product.do", new Product());
 		map.put("VideoPlay.do", new VideoPlay());
 		map.put("Bakset.do", new Bakset());
-
+		
+		//////////////////////////////////////////
+		// 안드로이드용
+		map.put("AndJoin.do", new AndJoin());
+		map.put("AndLogin.do", new AndLogin());
 	}
 	
 	
