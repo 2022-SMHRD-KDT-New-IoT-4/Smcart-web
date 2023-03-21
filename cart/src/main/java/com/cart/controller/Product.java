@@ -25,7 +25,7 @@ public class Product implements Command {
 		
 		
 		ProductDTO dto = new ProductDTO();
-		dto.setprod_seq("8809358103140"); // 상품 아이디(바코드 번호)
+//		dto.setprod_seq("8809358103140"); // 상품 아이디(바코드 번호)
 		
 		ProductDAO dao = new ProductDAO();
 		List<ProductDTO> list = dao.select(dto);

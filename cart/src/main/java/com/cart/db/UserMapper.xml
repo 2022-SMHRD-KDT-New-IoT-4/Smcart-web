@@ -10,6 +10,12 @@
   		values(#{user_id},#{user_pw},#{user_name},#{user_nick},#{user_email},#{user_phone},"U")
   </insert>
   
+  <!-- 안드로이드 조인 -->
+  <insert id="AndJoin" parameterType="UserDTO">
+  		insert into tb_user
+  		values(#{user_id},#{user_pw},#{user_name},#{user_nick},null,#{user_phone},"U")
+  </insert>
+  
   <select id="login" parameterType="UserDTO" resultType="UserDTO">
   		select * from tb_user
   		where user_id = #{user_id} and user_pw = #{user_pw}

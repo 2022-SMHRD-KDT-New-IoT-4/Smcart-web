@@ -9,7 +9,13 @@ public class BasketDTO {
     private String user_id; // 회원 아이디 
     private Integer prod_cnt; // 상품 수량 
     private Date sb_time; // 등록 시간 
+    private String prod_img; // 상품 이미지
+    private int prod_price;
+    private String prod_name;
+    
+    
 
+    
     public Long getsb_seq() {
         return sb_seq;
     }
@@ -49,4 +55,30 @@ public class BasketDTO {
     public void setsb_time(Date sb_time) {
         this.sb_time = sb_time;
     }
+
+	
+
+	public String getProd_img() {
+		return prod_img;
+	}
+
+	public void setProd_img(String prod_img) {
+		this.prod_img = prod_img;
+	}
+
+	public int getProd_price() {
+		return prod_price;
+	}
+
+	public void setProd_price(int prod_price) {
+		this.prod_price = prod_price;
+	}
+
+	public String getProd_name() {
+		return prod_name;
+	}
+
+	public void setProd_name(String prod_name) {
+		this.prod_name = prod_name;
+	}
 }

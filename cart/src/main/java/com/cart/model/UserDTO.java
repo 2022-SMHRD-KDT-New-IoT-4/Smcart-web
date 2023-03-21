@@ -22,6 +22,16 @@ public class UserDTO {
 		this.user_type = user_type;
 	}
     
+    // join dto
+    public UserDTO(String user_id, String user_pw, String user_name, String user_nick, String user_phone) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_name = user_name;
+		this.user_nick = user_nick;
+		this.user_phone = user_phone;
+	}
+    
     public UserDTO() {
     	
 	}

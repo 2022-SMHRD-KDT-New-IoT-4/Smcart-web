@@ -18,13 +18,19 @@ import com.cart.model.QrDAO;
 public class Qr implements Command {
 	private static final long serialVersionUID = 1L;
 	public int row;
+	// 변수 qr 추가
+	static String qr = null;
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
 		
 		String qr_code = request.getParameter("qr_code");
+		if(qr_code!=null) {
+			qr = qr_code;
+		}
+		System.out.println(qr);
 		QrDAO dao = new QrDAO();
-		row = dao.SelectQr(qr_code);
+		row = dao.SelectQr(qr);
 		System.out.println(row);
 		
 		
