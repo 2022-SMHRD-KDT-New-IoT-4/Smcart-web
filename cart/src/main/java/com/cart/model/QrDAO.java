@@ -18,7 +18,7 @@ public class QrDAO {
 				row = 1;
 				// 큐알 연동 성공시 tb_video_run 값을 1로 update한다.
 				// (값을 가져다 모듈 연동 여부에 사용할 수 있도록)
-				session.update("com.cart.model.QrDAO.UpdateRun", 0);
+				session.update("com.cart.model.QrDAO.UpdateRun");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
