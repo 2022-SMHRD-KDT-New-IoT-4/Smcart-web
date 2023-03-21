@@ -18,6 +18,7 @@ import com.cart.model.QrDAO;
 public class Qr implements Command {
 	private static final long serialVersionUID = 1L;
 	public int row;
+	// 변수 qr 추가
 	static String qr = null;
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
