@@ -3,7 +3,9 @@ package com.cart.model;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +28,8 @@ public class Barcode implements Command {
 	// 들어갔나요?
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 		BufferedReader bf = request.getReader();
 
 		if (bf == null) {
@@ -37,6 +40,8 @@ public class Barcode implements Command {
 		// 모듈에서 바코드값 가져오기 (bc_input)
 		JSONObject jobj = (JSONObject) obj;
 		String bc_input = (String) jobj.get("bc_input");
+		
+		String res_type = (String) jobj.get("res_type");
 
 		if (bc_input != null) {
 			System.out.println("바코드앵오 : " + bc_input);
@@ -56,17 +61,34 @@ public class Barcode implements Command {
 		// 장바구니 테이블 조회
 		List<BasketDTO> basket_list = dao.SelectBasket();
 		
-		if (basket_list != null) {
-			PrintWriter out = response.getWriter();
-			// json 구조로 바꾸고 out.print 하기
-			Gson gson = new Gson();
-			String jsonArray = gson.toJson(basket_list);
-			out.print(jsonArray); // 장바구니 조회결과
-			System.out.println("basket_list는 : " + jsonArray);
-		} else {
-			System.out.println("basket_list는 null");
-		}
+		Gson gson = new Gson();
+		PrintWriter out = response.getWriter();
+		
+		if ("barcode".equals(res_type)) {
 
+			for (BasketDTO v : basket_list) {
+				if (bc_input.equals(v.getProd_seq())) {
+					String jsonArray = gson.toJson(v);
+					out.print(jsonArray); // 장바구니 조회결과
+					break;
+				}
+			}
+			
+
+		}else {
+		
+			if (basket_list != null) {
+				
+				// json 구조로 바꾸고 out.print 하기
+		
+				String jsonArray = gson.toJson(basket_list);
+				out.print(jsonArray); // 장바구니 조회결과
+				System.out.println("basket_list는 : " + jsonArray);
+			} else {
+				System.out.println("basket_list는 null");
+			}
+
+		}
 
 		// null로 해야 결과값이 안드로 받아짐
 		return null;

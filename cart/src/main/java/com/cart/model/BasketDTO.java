@@ -4,7 +4,15 @@ import java.sql.Date;
 
 public class BasketDTO {
 	 
-    private Long sb_seq; // 장바구니 순번 
+    public String getProd_seq() {
+		return prod_seq;
+	}
+
+	public void setProd_seq(String prod_seq) {
+		this.prod_seq = prod_seq;
+	}
+
+	private Long sb_seq; // 장바구니 순번 
     private String prod_id;  // 상품 아이디 
     private String user_id; // 회원 아이디 
     private Integer prod_cnt; // 상품 수량 
@@ -12,6 +20,7 @@ public class BasketDTO {
     private String prod_img; // 상품 이미지
     private int prod_price;
     private String prod_name;
+    private String prod_seq; // 바코드 번호
     
     
 
@@ -81,4 +90,6 @@ public class BasketDTO {
 	public void setProd_name(String prod_name) {
 		this.prod_name = prod_name;
 	}
+	
+	
 }
