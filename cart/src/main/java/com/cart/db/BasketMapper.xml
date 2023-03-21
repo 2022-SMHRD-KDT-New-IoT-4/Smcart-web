@@ -4,12 +4,15 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.cart.model.BasketDAO" > 
-  
-  <select id="SelectProd" parameterType="BasketDTO" resultType="ProdDTO">
-  		select * from tb_product where prod_seq = #{prod_seq}
+  <!-- 이거 tb_prod에서 바코드번호 일치하는 애들 가져오는 sql이 ProductMapper에도 똑같이 있음. 
+  여기는 tb_basket에서 select하는 걸로 수정함. -->
+  <select id="SelectBasket" resultType="BasketDTO">
+  		SELECT B.prod_img as prod_img, B.prod_name as prod_name, A.prod_cnt as prod_cnt, B.prod_price as prod_price
+		FROM tb_basket AS A INNER JOIN tb_product AS B
+		ON (A.prod_seq = B.prod_seq);
   </select>
   
-  <insert id="InsertBasket" parameterType="ProdDTO">
+  <insert id="InsertBasket" parameterType="String">
   		insert into tb_basket values(nextval(sq_basket), #{prod_seq}, 1, 1, now())
   </insert>
   
