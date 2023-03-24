@@ -12,6 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import com.cart.controller.Command;
+import com.cart.controller.Qr;
 
 
 public class Video extends Qr {
