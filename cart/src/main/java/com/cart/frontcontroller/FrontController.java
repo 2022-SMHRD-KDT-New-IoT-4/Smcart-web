@@ -15,6 +15,7 @@ import com.cart.controller.AndJoin;
 import com.cart.controller.AndLogin;
 import com.cart.controller.Bakset;
 import com.cart.controller.Barcode;
+import com.cart.controller.Barcode2;
 import com.cart.controller.Board;
 import com.cart.controller.Boardone;
 import com.cart.controller.Command;
@@ -68,6 +69,7 @@ public class FrontController extends HttpServlet {
 		// 안드로이드용
 		map.put("AndJoin.do", new AndJoin());
 		map.put("AndLogin.do", new AndLogin());
+		map.put("Barcode2.do", new Barcode2());
 	}
 	
 	
