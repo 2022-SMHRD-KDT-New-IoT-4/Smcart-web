@@ -1,4 +1,4 @@
-package com.cart.model;
+package com.cart.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.cart.controller.Command;
 import com.cart.model.QrDAO;
 
 public class Qr implements Command {
