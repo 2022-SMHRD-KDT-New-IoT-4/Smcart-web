@@ -9,7 +9,7 @@
   <select id="SelectBasket" resultType="BasketDTO">
   		SELECT B.prod_seq, B.prod_img as prod_img, B.prod_name as prod_name, A.prod_cnt as prod_cnt, B.prod_price as prod_price
 		FROM tb_basket AS A INNER JOIN tb_product AS B
-		ON (A.prod_seq = B.prod_seq);
+		ON (A.prod_seq = B.prod_seq)
   </select>
   
   <insert id="InsertBasket" parameterType="String">
